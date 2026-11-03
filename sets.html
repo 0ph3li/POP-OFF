@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>The sets — POP OFF</title>
+  <meta name="description" content="Fourteen press-on sets, hand-painted in Milano. 24 tips each, 12 sizes, on in ten minutes, off whenever you want." />
+  <meta name="theme-color" content="#310101" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300..800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261102-21" />
+  <link rel="stylesheet" href="css/sets.css?v=20261102-21" />
+</head>
+<body data-page="sets">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="mark" viewBox="0 0 100 100">
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(90 50 50)" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(180 50 50)" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(270 50 50)" />
+      </symbol>
+      <symbol id="spark" viewBox="0 0 100 100"><path d="M50 0C53 38 62 47 100 50C62 53 53 62 50 100C47 62 38 53 0 50C38 47 47 38 50 0Z" /></symbol>
+    </defs>
+  </svg>
+
+  <!-- global fx -->
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <svg class="rip" id="rip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path /><path /><path /><path /></svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="hdr" id="hdr">
+    <a class="logo" href="index.html" aria-label="POP OFF home" data-cursor="home"><svg class="logo__mark"><use href="#mark" /></svg><span>pop</span><em>off</em></a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="sets.html" aria-current="page">The sets</a>
+      <a href="shapes.html">Shapes</a>
+      <a href="sizing.html">Sizing</a>
+      <a href="coven.html">The coven</a>
+      <button class="hdr__bag" id="bagBtn" data-cursor="your bag">bag <b id="bagN">0</b></button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== 01 · THE POSTER — girls night again: paper on the left, the photo on the right ========== -->
+    <section class="sp" id="sp">
+      <div class="sp__paper">
+        <i class="dash dash--l"></i><i class="dash dash--r"></i>
+        <p class="sp__tiny">the collection<br />autumn / winter 26</p>
+        <h1 class="sp__title" aria-label="the sets">
+          <span class="sp__serif">THE</span>
+          <svg class="sp__spark"><use href="#spark" /></svg>
+          <span class="sp__script">Sets</span>
+        </h1>
+        <p class="sp__ru">fourteen sets,<br />hand-painted in milano</p>
+        <dl class="sp__dl">
+          <div><dt><i class="dot"></i>in every box</dt><dd>24 tips <em>· 12 sizes</em></dd></div>
+          <div><dt>on in</dt><dd>10 minutes <em>in a taxi</em></dd></div>
+          <div><dt>from</dt><dd>€30 <em>to €44</em></dd></div>
+        </dl>
+        <a class="sp__go" href="#shop" data-jump data-cursor="shop">shop the sets ↓</a>
+      </div>
+      <div class="sp__photo">
+        <div class="slot" data-img="img/SETS/hero.jpg" data-label="hero.jpg · a girl, one hand in front of her face, long decorated nails. portrait 3:4" data-pos="50% 30%" style="--tone:#c7a9a6"></div>
+        <p class="sp__by">by pop off<br />painted in milano</p>
+        <p class="sp__dj">painted by<br /><b>GIULIA</b><br /><b>BEA</b></p>
+        <i class="dash dash--r2"></i>
+      </div>
+    </section>
+
+    <!-- ========== 02 · THE SHOP — the nail studio feed: one photo per set ========== -->
+    <section class="shop" id="shop">
+      <div class="shop__head">
+        <p class="shop__k">the shop</p>
+        <h2 class="shop__title">pick your <em>claws</em></h2>
+        <div class="shop__filters" role="group" aria-label="filter by shape">
+          <button class="is-on" data-shape="all">all <sup>14</sup></button>
+          <button data-shape="almond">almond</button>
+          <button data-shape="stiletto">stiletto</button>
+          <button data-shape="square">square</button>
+          <button data-shape="coffin">coffin</button>
+        </div>
+      </div>
+      <div class="shop__grid" id="shopGrid"><!-- drawn by js/sets.js from the SETS list --></div>
+      <p class="shop__foot">♥♥ &nbsp; every set is painted to order. it leaves milano in three days. &nbsp; ♥♥</p>
+    </section>
+
+    <!-- ========== THE SET POSTER — opens over the page, one poster per set ========== -->
+    <div class="po" id="po" role="dialog" aria-modal="true" aria-label="set" hidden>
+      <div class="po__paper">
+        <i class="dash dash--l"></i>
+        <p class="po__tiny" id="poTiny">set no. 01</p>
+        <h2 class="po__title"><span class="po__serif" id="poSerif">MILK</span><svg class="po__spark"><use href="#spark" /></svg><span class="po__script" id="poScript">Bath</span></h2>
+        <p class="po__ru" id="poNote"></p>
+        <dl class="sp__dl po__dl">
+          <div><dt><i class="dot"></i>shape</dt><dd id="poShape"></dd></div>
+          <div><dt>length</dt><dd id="poLen"></dd></div>
+          <div><dt>in the box</dt><dd>24 tips <em>· 12 sizes</em></dd></div>
+        </dl>
+        <img class="po__tips" id="poTips" alt="" />
+        <div class="po__buy"><p class="po__price" id="poPrice">€34</p><button class="po__add" id="poAdd" data-mag data-cursor="add to bag">add to bag</button></div>
+      </div>
+      <div class="po__photo" id="poPhoto"></div>
+      <button class="po__close" id="poClose" data-cursor="close" aria-label="close">close ✕</button>
+      <div class="po__nav"><button id="poPrev" data-cursor="back" aria-label="previous set">←</button><span id="poN">01 / 14</span><button id="poNext" data-cursor="next" aria-label="next set">→</button></div>
+    </div>
+
+    <!-- ========== FOOTER — mtrlgrl flyers, lilac ========== -->
+    <footer class="ft" id="ft">
+      <div class="ft__grid">
+        <div class="ft__tile ft__tile--lines" aria-hidden="true"><span>pop off</span><span>pop off</span><span>pop off</span><span>pop off</span><span>pop off</span></div>
+        <div class="ft__tile ft__tile--soon">
+          <p class="ft__cap">pop off · new drop</p>
+          <p class="ft__script">Coming Soon</p>
+          <p class="ft__cap" id="dropWhen">friday · 21:00</p>
+        </div>
+        <div class="ft__tile ft__tile--map">
+          <p class="ft__cap">the house</p>
+          <p class="ft__links"><a href="index.html">Home</a><a href="sets.html">The sets</a><a href="shapes.html">Shapes</a><a href="sizing.html">Sizing kit</a><a href="coven.html">The coven</a><a href="mailto:claws@popoff.studio">claws@popoff.studio</a></p>
+        </div>
+        <div class="ft__tile ft__tile--xo">
+          <p class="ft__cap">xoxo,</p>
+          <p class="ft__script ft__script--big">Pop Off</p>
+          <form class="ft__news" id="newsForm"><input type="email" placeholder="your email, kitten" aria-label="email" required /><button data-cursor="join">join</button></form>
+        </div>
+        <div class="ft__tile ft__tile--pale">
+          <p class="ft__cap">@shoppopoff</p>
+          <p class="ft__script ft__script--ghost">Claws<br />Out<br />Perfection</p>
+          <p class="ft__cap">pop off · cherry leopard set</p>
+        </div>
+        <div class="ft__tile ft__tile--it">
+          <p class="ft__cap">x o x o , &nbsp; p o p &nbsp; o f f</p>
+          <p class="ft__script ft__script--big">It Grl<br />Claws</p>
+          <p class="ft__cap">dropping every friday</p>
+        </div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 POP OFF — a concept. no real nails were bitten.</span>
+        <span data-clock>milano 00:00</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261103-1"></script>
+  <script src="js/sets.js?v=20261103-1"></script>
+</body>
+</html>
+<!--
+      /\_/\
+     ( o.o )   the sets, fourteen of them.
+      > ^ <    a poster each, painted by hand.
+    ghostly.grl ♥
+-->

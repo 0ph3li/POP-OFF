@@ -1,0 +1,121 @@
+/* =========================================================
+   POP OFF — sizing.css (the sizing kit)
+   the leopard on grey → the désire packaging grid
+   → the size finder over the tiger panorama
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+/* ========== 01 · THE LEOPARD ON GREY ========== */
+.sz { position: relative; display: grid; grid-template-columns: 58fr 42fr; min-height: 100svh; background: #cfd0d3; color: #1f1b1a; overflow: hidden; }
+.sz__cat { position: relative; }
+.sz__cat .slot { position: absolute; inset: 0; background-color: transparent; }
+.sz__txt { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 120px var(--gut) 60px clamp(10px, 2vw, 30px); }
+.sz__k { font-size: 10px; font-weight: 800; letter-spacing: .26em; text-transform: uppercase; }
+.sz__title { position: relative; display: block; margin: 18px 0 0; font-weight: 400; line-height: 1; }
+.sz__serif { display: block; font-family: var(--f-serif); font-weight: 500; font-size: clamp(56px, 7.4vw, 124px); letter-spacing: -.04em; line-height: .9; }
+.sz__script { display: block; margin: -.22em 0 0 .9em; font-family: var(--f-script); font-size: clamp(70px, 8.6vw, 150px); color: #fff; line-height: 1; text-shadow: 0 2px 20px rgba(31, 27, 26, .12); }
+.sz__sub { font-family: var(--f-serif); font-style: italic; font-size: clamp(20px, 2vw, 28px); margin-top: 4px; }
+.sz__p { max-width: 380px; margin-top: 26px; font-size: 14px; line-height: 1.6; }
+.sz__p b { font-family: var(--f-serif); font-size: 1.15em; }
+.sz__go { align-self: flex-start; margin-top: 30px; padding: 14px 26px; border: 1.5px solid #1f1b1a; border-radius: 99px; font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; transition: background .3s, color .3s; }
+.sz__go:hover { background: #1f1b1a; color: #cfd0d3; }
+
+/* ========== 02 · THE DÉSIRE GRID ========== */
+.kit { padding: clamp(80px, 10vw, 140px) var(--gut); background: #fff; }
+.kit__grid { columns: 2; column-gap: clamp(12px, 1.6vw, 22px); max-width: 760px; margin: 0 auto; }
+.kt { position: relative; break-inside: avoid; margin-bottom: clamp(12px, 1.6vw, 22px); border-radius: 18px; overflow: hidden; background: #e6e4e0; }
+.kt canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kt__brand { font-family: var(--f-serif); font-weight: 400; font-size: clamp(16px, 2vw, 26px); letter-spacing: .01em; color: #3a3735; text-align: center; line-height: 1; }
+.kt__brand small { display: block; margin-top: 5px; font-family: var(--f-sans, 'Manrope'), sans-serif; font-size: 6.5px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+.kt__sig { font-family: 'Mrs Saint Delafield', var(--f-script); font-size: 22px; color: #3a3735; text-align: center; }
+
+/* the bag */
+.kt--bag { aspect-ratio: 4 / 5; }
+.kt__handle { position: absolute; top: -10%; left: 30%; width: 7%; height: 26%; border: 3px solid #f7f5f1; border-bottom: 0; border-radius: 40px 40px 0 0; transform: rotate(-12deg); }
+.kt__handle--r { left: 58%; transform: rotate(-12deg); }
+.kt__handle--b { top: 58%; left: 34%; height: 22%; }
+.kt__handle--b.kt__handle--r { left: 64%; }
+.kt__brand--a { position: absolute; top: 14%; right: 12%; transform: rotate(-8deg); }
+.kt__lining { position: absolute; left: -6%; right: -6%; top: 34%; height: 24%; transform: rotate(-8deg); box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .3); }
+.kt__brand--b { position: absolute; bottom: 14%; right: 10%; transform: rotate(-8deg); font-size: clamp(18px, 2.4vw, 30px); }
+
+/* the card with the grey ribbon */
+.kt--card { aspect-ratio: 4 / 3.6; background: #2b2a29; }
+.kt__paper { position: absolute; left: 10%; right: 10%; top: -4%; bottom: 10%; background: #f2f0ec; border-radius: 2px; box-shadow: 0 20px 30px -14px rgba(0, 0, 0, .5); }
+.kt__paper .kt__brand { margin-top: 22%; }
+.kt__ribbon { position: absolute; left: 42%; top: 36%; width: 16%; height: 60%; background: #5f5d5b; transform: rotate(-8deg); display: grid; place-items: center; }
+.kt__ribbon span { font-family: 'Mrs Saint Delafield', var(--f-script); font-size: 20px; color: #e6e4e0; transform: rotate(90deg); white-space: nowrap; }
+
+/* the pouch, on black */
+.kt--pouch { aspect-ratio: 1; background: #0e0e0e; }
+.kt__env { position: absolute; left: 22%; right: 22%; top: 8%; bottom: 8%; overflow: hidden; border-radius: 2px; }
+.kt__sleeve { position: absolute; left: -2%; right: -2%; top: 36%; height: 24%; display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(240, 238, 234, .72); backdrop-filter: blur(2px); }
+.kt__sleeve span { font-family: 'Mrs Saint Delafield', var(--f-script); font-size: 26px; color: #3a3735; line-height: 1; }
+.kt__sleeve small { font-size: 6px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #3a3735; }
+
+/* the note in front of the leopard card */
+.kt--note { aspect-ratio: 4 / 6; background: linear-gradient(160deg, #d8c3c9, #ece6e3 60%); }
+.kt__back { position: absolute; left: 10%; width: 52%; top: 8%; height: 56%; overflow: hidden; border-radius: 2px; transform: rotate(-2deg); }
+.kt__front { position: absolute; left: 30%; right: 6%; top: 26%; bottom: 7%; padding: 10% 8%; background: #f4f2ee; box-shadow: 0 20px 30px -16px rgba(0, 0, 0, .35); display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.kt__copy { font-size: 9px; line-height: 1.55; text-align: center; color: #57534f; }
+.kt__est { margin-top: auto; font-size: 6.5px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #3a3735; }
+
+/* the box and its slim twin */
+.kt--box { aspect-ratio: 1; background: linear-gradient(#0e0e0e 70%, #cfccc7 70%); }
+.kt__slim { position: absolute; left: 12%; width: 14%; top: 26%; bottom: 14%; overflow: hidden; }
+.kt__carton { position: absolute; left: 32%; right: 12%; top: 18%; bottom: 14%; background: #dedcd8; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 30px; }
+.kt__carton i { position: absolute; top: 7%; width: 22%; height: 7%; border-radius: 99px; background: #0e0e0e; }
+.kt__carton .kt__brand { font-size: clamp(12px, 1.4vw, 17px); }
+.kt__carton .kt__sig { font-size: 16px; }
+
+/* the bag, close */
+.kt--close { aspect-ratio: 4 / 4.6; background: #e9e7e3; }
+.kt__top { position: absolute; left: 0; right: 0; top: 0; height: 30%; transform: skewY(-6deg); transform-origin: left; }
+.kt__rope { position: absolute; top: 18%; left: 26%; width: 9%; height: 36%; border: 5px solid #121212; border-bottom: 0; border-radius: 40px 40px 0 0; transform: rotate(-6deg); }
+.kt__rope--r { left: 56%; }
+.kt__brand--big { position: absolute; left: 6%; bottom: 10%; transform: rotate(-14deg); font-size: clamp(26px, 3.6vw, 46px); text-align: left; }
+
+.kit__buy { display: grid; justify-items: center; text-align: center; gap: 10px; margin-top: clamp(40px, 5vw, 60px); }
+.kit__k { font-size: 10px; font-weight: 800; letter-spacing: .3em; text-transform: uppercase; color: #3a3735; }
+.kit__line { font-family: var(--f-serif); font-size: clamp(22px, 2.6vw, 34px); line-height: 1.15; color: #1f1b1a; max-width: 640px; }
+.kit__line em { color: var(--pink); }
+.kit__add { margin-top: 12px; padding: 14px 28px; border-radius: 99px; background: #1f1b1a; color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; transition: background .3s; }
+.kit__add:hover { background: var(--cherry); }
+
+/* ========== 03 · THE SIZE FINDER over the panorama ========== */
+.fd { position: relative; display: grid; place-items: center; min-height: 100svh; padding: clamp(80px, 9vw, 120px) var(--gut); overflow: hidden; background: #e2a9bd; }
+.fd__pano { position: absolute; inset: 0; }
+.fd__pano .slot { position: absolute; inset: -6% 0; }
+.fd__card { position: relative; z-index: 2; width: min(620px, 100%); padding: clamp(26px, 4vw, 46px); border-radius: 26px; background: rgba(255, 250, 251, .9); backdrop-filter: blur(10px); box-shadow: 0 40px 80px -40px rgba(49, 1, 1, .5); color: #4a2214; }
+.fd__k { font-size: 10px; font-weight: 800; letter-spacing: .26em; text-transform: uppercase; color: #d35a87; }
+.fd__title { margin-top: 8px; font-family: var(--f-serif); font-weight: 400; font-size: clamp(34px, 4.4vw, 58px); line-height: 1; letter-spacing: -.02em; }
+.fd__title em { font-family: var(--f-script); font-style: normal; color: #d35a87; font-size: 1.15em; }
+.fd__how { margin: 20px 0 0; padding-left: 1.2em; font-family: var(--f-serif); font-style: italic; font-size: 15px; line-height: 1.5; }
+.fd__pre { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 22px; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.fd__pre button { min-width: 40px; padding: 7px 12px; border-radius: 99px; border: 1px solid #e3c7cf; font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #4a2214; transition: background .3s, color .3s; }
+.fd__pre button.is-on, .fd__pre button:hover { background: #42979a; border-color: #42979a; color: #fff; }
+.fd__hand { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; align-items: end; margin-top: 26px; }
+.fg { display: grid; justify-items: center; gap: 8px; }
+.fg__nail { position: relative; display: flex; align-items: flex-end; justify-content: center; height: 120px; width: 100%; }
+.fg__nail img { width: var(--w, 40px); height: auto; max-height: 120px; object-fit: contain; filter: drop-shadow(0 6px 10px rgba(49, 1, 1, .2)); transition: width .25s var(--ease); }
+.fg__size { font-family: var(--f-serif); font-size: 30px; line-height: 1; }
+.fg__mm { font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; opacity: .7; }
+.fg input { width: 100%; accent-color: #d35a87; }
+.fg__name { font-size: 9px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+.fd__res { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 26px; padding-top: 20px; border-top: 1px solid #ecd5dc; }
+.fd__res .fd__k { width: 100%; }
+.fd__nums { font-family: var(--f-serif); font-size: clamp(28px, 3.6vw, 44px); letter-spacing: .02em; line-height: 1; }
+.fd__save { padding: 13px 22px; border-radius: 99px; background: var(--cherry); color: var(--blush); font-size: 10px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; transition: background .3s; }
+.fd__save:hover { background: #d35a87; }
+
+/* ========== responsive ========== */
+@media (max-width: 860px) {
+  .sz { grid-template-columns: 1fr; }
+  .sz__cat { min-height: 52svh; }
+  .sz__txt { padding: 20px var(--gut) 60px; }
+  .kit__grid { columns: 2; }
+  .kt__copy { font-size: 7px; }
+  .fg__nail { height: 90px; }
+  .fg__size { font-size: 24px; }
+}
+@media (max-width: 480px) { .kt__copy { display: none; } }

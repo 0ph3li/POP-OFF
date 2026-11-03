@@ -1,0 +1,102 @@
+/* =========================================================
+   POP OFF — sets.css (the sets)
+   a girls-night poster on top, the nail studio feed below,
+   and every set opens as its own poster
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+/* ========== 01 · THE POSTER ========== */
+.sp { display: grid; grid-template-columns: 52fr 48fr; min-height: 100svh; background: var(--bone); color: var(--cocoa); }
+.sp__paper { position: relative; padding: clamp(110px, 11vw, 150px) clamp(24px, 5vw, 70px) clamp(40px, 5vw, 70px); display: flex; flex-direction: column; justify-content: center; }
+.sp__paper .dash--l { left: 3.5%; top: 12%; }
+.sp__paper .dash--r { left: 3.5%; bottom: 9%; }
+.sp__tiny { position: absolute; top: 84px; left: clamp(24px, 5vw, 70px); color: var(--pink); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; line-height: 1.5; }
+.sp__title { position: relative; display: block; line-height: 1; margin-bottom: clamp(40px, 6vw, 90px); font-weight: 400; }
+.sp__serif { display: block; font-family: var(--f-serif); font-weight: 500; font-size: clamp(90px, 14vw, 230px); letter-spacing: -.035em; line-height: .9; color: #4a2214; }
+.sp__script { position: absolute; left: 30%; top: 46%; font-family: var(--f-script); font-size: clamp(90px, 13vw, 220px); color: var(--pink); transform: rotate(-5deg); white-space: nowrap; text-shadow: 0 0 1px var(--bone); }
+.sp__spark { position: absolute; left: 4%; top: -12%; width: clamp(30px, 3.6vw, 56px); height: clamp(30px, 3.6vw, 56px); fill: var(--pink); }
+.sp__ru { color: var(--pink); font-size: clamp(13px, 1.25vw, 17px); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; line-height: 1.25; margin: clamp(30px, 4vw, 60px) 0 30px clamp(20px, 5vw, 70px); }
+.sp__dl { display: grid; gap: 14px; }
+.sp__dl > div { display: grid; grid-template-columns: 130px 1fr; align-items: baseline; }
+.sp__dl dt { position: relative; font-family: var(--f-serif); font-style: italic; font-size: 17px; }
+.sp__dl dt .dot { position: absolute; left: -26px; top: 5px; }
+.sp__dl dd { font-size: clamp(16px, 1.6vw, 22px); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #4a2214; }
+.sp__dl dd em { font-family: var(--f-serif); font-style: italic; font-weight: 400; text-transform: none; color: var(--pink); letter-spacing: 0; }
+.sp__go { align-self: flex-start; margin-top: 34px; padding: 14px 26px; border: 1.5px solid var(--cherry); border-radius: 99px; color: var(--cherry); font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; transition: background .3s, color .3s; }
+.sp__go:hover { background: var(--cherry); color: var(--blush); }
+.sp__photo { position: relative; overflow: hidden; }
+.sp__photo .slot { position: absolute; inset: 0; }
+.sp__by, .sp__dj { position: absolute; z-index: 2; right: 26px; color: var(--pink); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-align: right; line-height: 1.5; }
+.sp__by { top: 84px; }
+.sp__dj { bottom: 28px; }
+.sp__dj b { color: var(--blush); font-weight: 800; }
+.sp__photo .dash--r2 { right: 16px; top: 38%; z-index: 2; }
+
+/* ========== 02 · THE SHOP — the feed ========== */
+.shop { padding: clamp(80px, 10vw, 140px) var(--gut); background: #fff; }
+.shop__head { display: grid; justify-items: center; text-align: center; margin-bottom: clamp(30px, 4vw, 54px); }
+.shop__k { color: var(--pink); font-size: 10px; font-weight: 800; letter-spacing: .3em; text-transform: uppercase; }
+.shop__title { margin-top: 10px; font-family: var(--f-serif); font-weight: 400; font-size: clamp(40px, 6vw, 92px); line-height: 1.05; letter-spacing: -.02em; color: #4a2214; }
+.shop__title em { font-family: var(--f-script); font-style: normal; font-size: 1.2em; color: var(--pink); }
+.shop__filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 26px; }
+.shop__filters button { padding: 8px 18px; border: 1px solid #e3d6d0; border-radius: 99px; font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--cocoa); transition: background .3s, color .3s, border-color .3s; }
+.shop__filters button:hover { border-color: var(--cherry); color: var(--cherry); }
+.shop__filters button.is-on { background: var(--cherry); border-color: var(--cherry); color: var(--blush); }
+.shop__filters sup { font-size: 8px; }
+.shop__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 18px); max-width: 1320px; margin: 0 auto; }
+.tile { position: relative; display: block; width: 100%; text-align: left; color: var(--cocoa); }
+.tile.is-hidden { display: none; }
+.tile__ph { position: relative; aspect-ratio: 4 / 5; overflow: hidden; }
+.tile__ph .slot { position: absolute; inset: 0; transition: transform .9s var(--ease); }
+.tile__hover { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; background: rgba(235, 227, 223, .94); opacity: 0; transition: opacity .45s var(--ease); text-align: center; padding: 16px; }
+.tile__hover b { font-family: var(--f-serif); font-weight: 500; font-size: clamp(26px, 2.6vw, 40px); letter-spacing: -.02em; line-height: .9; color: #4a2214; }
+.tile__hover em { font-family: var(--f-script); font-style: normal; font-size: clamp(36px, 3.6vw, 58px); line-height: .9; color: var(--pink); transform: rotate(-5deg); }
+.tile__tips { width: 86%; max-height: 30%; object-fit: contain; margin-top: 16px; filter: drop-shadow(0 6px 10px rgba(49, 1, 1, .18)); }
+.tile__hover small { margin-top: 14px; font-size: 9px; font-weight: 800; letter-spacing: .24em; text-transform: uppercase; color: var(--cherry); }
+.tile:hover .tile__hover, .tile:focus-visible .tile__hover { opacity: 1; }
+.tile:hover .slot { transform: scale(1.06); }
+.tile__cap { display: flex; justify-content: space-between; gap: 10px; padding: 10px 2px 0; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.tile__cap span:last-child { font-family: var(--f-serif); font-style: italic; font-size: 15px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.tile__ltd { position: absolute; left: 10px; top: 10px; z-index: 3; padding: 4px 9px; border-radius: 99px; background: var(--pink); color: #fff; font-size: 8px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+.shop__foot { margin-top: clamp(40px, 5vw, 70px); text-align: center; font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--cocoa); }
+
+/* ========== THE SET POSTER (dialog) ========== */
+.po { position: fixed; inset: 0; z-index: 60; display: grid; grid-template-columns: 52fr 48fr; background: var(--bone); color: var(--cocoa); }
+.po[hidden] { display: none; }
+.po__paper { position: relative; padding: clamp(70px, 8vw, 110px) clamp(24px, 5vw, 70px) clamp(30px, 4vw, 50px); display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.po__paper .dash--l { left: 3.5%; top: 12%; }
+.po__tiny { position: absolute; top: 30px; left: clamp(24px, 5vw, 70px); color: var(--pink); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.po__title { position: relative; display: block; line-height: 1; margin-bottom: clamp(30px, 4vw, 60px); font-weight: 400; }
+.po__serif { display: block; font-family: var(--f-serif); font-weight: 500; font-size: clamp(56px, 8.4vw, 140px); letter-spacing: -.035em; line-height: .9; color: #4a2214; }
+.po__script { position: absolute; left: 16%; top: 48%; font-family: var(--f-script); font-size: clamp(64px, 9.4vw, 160px); color: var(--pink); transform: rotate(-5deg); white-space: nowrap; text-shadow: 0 0 1px var(--bone); }
+.po__spark { position: absolute; left: 8%; top: -14%; width: clamp(26px, 3vw, 46px); height: clamp(26px, 3vw, 46px); fill: var(--pink); }
+.po__ru { max-width: 440px; color: var(--pink); font-size: clamp(12px, 1.1vw, 15px); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; line-height: 1.35; margin: clamp(24px, 3vw, 44px) 0 24px clamp(20px, 5vw, 70px); }
+.po__tips { display: block; width: 100%; max-width: 520px; height: auto; max-height: clamp(110px, 13vw, 170px); object-fit: contain; object-position: left center; margin-top: 26px; filter: drop-shadow(0 10px 16px rgba(49, 1, 1, .18)); }
+.po__buy { display: flex; align-items: center; gap: 20px; margin-top: 22px; }
+.po__price { font-family: var(--f-serif); font-style: italic; font-size: clamp(26px, 2.6vw, 38px); }
+.po__add { padding: 14px 26px; border: 1.5px solid var(--cherry); border-radius: 99px; color: var(--cherry); font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; transition: background .3s, color .3s; }
+.po__add:hover { background: var(--cherry); color: var(--blush); }
+.po__photo { position: relative; overflow: hidden; }
+.po__photo .slot { position: absolute; inset: 0; }
+.po__close { position: absolute; top: 22px; right: 26px; z-index: 3; padding: 9px 16px; border-radius: 99px; background: var(--bone); color: var(--cherry); font-size: 10px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+.po__nav { position: absolute; right: 26px; bottom: 24px; z-index: 3; display: flex; align-items: center; gap: 14px; padding: 6px; border-radius: 99px; background: var(--bone); font-size: 10px; font-weight: 800; letter-spacing: .2em; color: var(--cherry); }
+.po__nav button { width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--cherry); color: var(--cherry); font-size: 15px; transition: background .3s, color .3s; }
+.po__nav button:hover { background: var(--cherry); color: var(--blush); }
+body.po-open { overflow: hidden; }
+body.po-open .hdr { opacity: 0; pointer-events: none; }
+
+/* ========== responsive ========== */
+@media (max-width: 1000px) { .shop__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 860px) {
+  .sp { grid-template-columns: 1fr; }
+  .sp__photo { min-height: 80svh; order: -1; }
+  .sp__tiny { top: 30px; }
+  .sp__paper { padding-top: 90px; }
+  .shop__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile__hover { display: none; }
+  .po { grid-template-columns: 1fr; grid-template-rows: 40svh auto; overflow-y: auto; }
+  .po__photo { order: -1; }
+  .po__paper { padding: 60px var(--gut) 110px; justify-content: flex-start; overflow: visible; }
+  .po__nav { position: fixed; top: 18px; bottom: auto; left: var(--gut); right: auto; }
+  .po__close { position: fixed; }
+}

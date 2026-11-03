@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>Your bag — POP OFF</title>
+  <meta name="description" content="Your bag: the sets you are taking home, your sizes, your codes. Checkout opens with the friday drop." />
+  <meta name="theme-color" content="#310101" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300..800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261102-24" />
+  <link rel="stylesheet" href="css/bag.css?v=20261103-4" />
+</head>
+<body data-page="bag">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="mark" viewBox="0 0 100 100">
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(90 50 50)" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(180 50 50)" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(270 50 50)" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- global fx -->
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <svg class="rip" id="rip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path /><path /><path /><path /></svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="hdr" id="hdr">
+    <a class="logo" href="index.html" aria-label="POP OFF home" data-cursor="home"><svg class="logo__mark"><use href="#mark" /></svg><span>pop</span><em>off</em></a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="sets.html">The sets</a>
+      <a href="shapes.html">Shapes</a>
+      <a href="sizing.html">Sizing</a>
+      <a href="coven.html">The coven</a>
+      <button class="hdr__bag" id="bagBtn" aria-current="page" data-cursor="your bag">bag <b id="bagN">0</b></button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== 01 · THE DÉSIRE BAG — the paper bag on grey, your sets peek out of the top ========== -->
+    <section class="bg" id="bg">
+      <div class="bg__stage">
+        <div class="bg__bag">
+          <div class="bg__peek" id="bgPeek" aria-hidden="true"><!-- the tips of what's inside, drawn by js/bag.js --></div>
+          <i class="bg__rope"></i><i class="bg__rope bg__rope--r"></i>
+          <div class="bg__paper">
+            <canvas data-leo="ink" aria-hidden="true"></canvas>
+            <p class="bg__brand">The Pop Off<small>claws, made to come off</small></p>
+            <p class="bg__no" id="bgNo">0 inside</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg__col">
+        <p class="bg__k">your bag</p>
+        <h1 class="bg__title"><span class="bg__the">the</span><span class="bg__serif">BAG</span></h1>
+        <ul class="bg__list" id="bgList"><!-- drawn by js/bag.js --></ul>
+        <div class="bg__empty" id="bgEmpty" hidden>
+          <p class="bg__sad">your bag is empty. so are your nails, probably.</p>
+          <p class="bg__k">three to start with</p>
+          <div class="bg__picks" id="bgPicks"></div>
+          <a class="bg__go" href="sets.html" data-cursor="shop">see all fourteen sets →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 02 · THE RECEIPT — skin goddess stationery: the fur card and the cream card, on cherry satin ========== -->
+    <section class="rc" id="rc">
+      <div class="rc__stage">
+        <div class="rc__fur"><canvas data-leo="fur" aria-hidden="true"></canvas><p class="rc__furbrand">POP <span>O</span>FF</p><p class="rc__furk">order card</p></div>
+        <div class="rc__card">
+          <p class="rc__title"><span>Your</span> RECEIPT</p>
+          <p class="rc__deal">checkout opens with the friday drop · <b id="rcWhen">friday 21:00</b></p>
+          <dl class="rc__rows" id="rcRows"><!-- drawn by js/bag.js --></dl>
+          <form class="rc__code" id="rcCode" autocomplete="off">
+            <label>Code: <input id="rcCodeIn" maxlength="24" placeholder="CLAWSOUT?" /></label>
+            <button data-cursor="apply">apply</button>
+          </form>
+          <p class="rc__sizes" id="rcSizes"></p>
+          <div class="rc__foot">
+            <p class="rc__total"><span>total</span><b id="rcTotal">€0</b></p>
+            <button class="rc__go" id="rcGo" data-cursor="check out">claws out · check out</button>
+          </div>
+        </div>
+      </div>
+      <p class="rc__cap">The Pop Off stationery<br />every order ships in the leopard bag</p>
+    </section>
+
+    <!-- ========== FOOTER — mtrlgrl flyers, lilac ========== -->
+    <footer class="ft" id="ft">
+      <div class="ft__grid">
+        <div class="ft__tile ft__tile--lines" aria-hidden="true"><span>pop off</span><span>pop off</span><span>pop off</span><span>pop off</span><span>pop off</span></div>
+        <div class="ft__tile ft__tile--soon">
+          <p class="ft__cap">pop off · new drop</p>
+          <p class="ft__script">Coming Soon</p>
+          <p class="ft__cap" id="dropWhen">friday · 21:00</p>
+        </div>
+        <div class="ft__tile ft__tile--map">
+          <p class="ft__cap">the house</p>
+          <p class="ft__links"><a href="index.html">Home</a><a href="sets.html">The sets</a><a href="shapes.html">Shapes</a><a href="sizing.html">Sizing kit</a><a href="coven.html">The coven</a><a href="mailto:claws@popoff.studio">claws@popoff.studio</a></p>
+        </div>
+        <div class="ft__tile ft__tile--xo">
+          <p class="ft__cap">xoxo,</p>
+          <p class="ft__script ft__script--big">Pop Off</p>
+          <form class="ft__news" id="newsForm"><input type="email" placeholder="your email, kitten" aria-label="email" required /><button data-cursor="join">join</button></form>
+        </div>
+        <div class="ft__tile ft__tile--pale">
+          <p class="ft__cap">@shoppopoff</p>
+          <p class="ft__script ft__script--ghost">Claws<br />Out<br />Perfection</p>
+          <p class="ft__cap">pop off · cherry leopard set</p>
+        </div>
+        <div class="ft__tile ft__tile--it">
+          <p class="ft__cap">x o x o , &nbsp; p o p &nbsp; o f f</p>
+          <p class="ft__script ft__script--big">It Grl<br />Claws</p>
+          <p class="ft__cap">dropping every friday</p>
+        </div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 POP OFF — a concept. no real nails were bitten.</span>
+        <span data-clock>milano 00:00</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261103-1"></script>
+  <script src="js/bag.js?v=20261103-2"></script>
+</body>
+</html>
+<!--
+      /\_/\
+     ( o.o )   24 tips, a file, a leopard bag.
+      > ^ <    she said "just one set". she lied.
+    ghostly.grl ♥
+-->

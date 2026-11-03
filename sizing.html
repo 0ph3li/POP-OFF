@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>Sizing — POP OFF</title>
+  <meta name="description" content="Twelve sizes, from 0 (the widest) to 11 (the smallest). Find yours with a ruler in two minutes, or order the sizing kit for €6, back on your first set." />
+  <meta name="theme-color" content="#310101" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300..800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261102-24" />
+  <link rel="stylesheet" href="css/sizing.css?v=20261102-24" />
+</head>
+<body data-page="sizing">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="mark" viewBox="0 0 100 100">
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(90 50 50)" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(180 50 50)" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(270 50 50)" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- global fx -->
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <svg class="rip" id="rip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path /><path /><path /><path /></svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="hdr" id="hdr">
+    <a class="logo" href="index.html" aria-label="POP OFF home" data-cursor="home"><svg class="logo__mark"><use href="#mark" /></svg><span>pop</span><em>off</em></a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="sets.html">The sets</a>
+      <a href="shapes.html">Shapes</a>
+      <a href="sizing.html" aria-current="page">Sizing</a>
+      <a href="coven.html">The coven</a>
+      <button class="hdr__bag" id="bagBtn" data-cursor="your bag">bag <b id="bagN">0</b></button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== 01 · THE LEOPARD ON GREY — she looks back over her tail ========== -->
+    <section class="sz" id="sz">
+      <div class="sz__cat"><div class="slot" data-img="img/SIZING/leopard.png" data-label="leopard.png · a leopard looking back over a black and white tail, on plain light grey (or cut out). square" data-pos="0% 50%" style="--tone:#c9c1b6"></div></div>
+      <div class="sz__txt">
+        <p class="sz__k">sizing · twelve sizes</p>
+        <h1 class="sz__title"><span class="sz__serif">MEASURE</span><span class="sz__script">twice</span></h1>
+        <p class="sz__sub">scratch once.</p>
+        <p class="sz__p">every box has 24 tips in 12 sizes, from <b>0</b>, the widest, to <b>11</b>, the smallest. you wear ten of them. find yours with a ruler in two minutes, or let the kit do it.</p>
+        <a class="sz__go" href="#finder" data-jump data-cursor="measure">find my sizes ↓</a>
+      </div>
+    </section>
+
+    <!-- ========== 02 · THE DÉSIRE GRID — the sizing kit, as packaging ========== -->
+    <section class="kit" id="kit">
+      <div class="kit__grid">
+        <!-- the bag, open, leopard lining -->
+        <div class="kt kt--bag">
+          <i class="kt__handle"></i><i class="kt__handle kt__handle--r"></i>
+          <p class="kt__brand kt__brand--a">The Sizing Kit<small>pop off · milano</small></p>
+          <div class="kt__lining"><canvas data-leo="ink"></canvas></div>
+          <i class="kt__handle kt__handle--b"></i><i class="kt__handle kt__handle--b kt__handle--r"></i>
+          <p class="kt__brand kt__brand--b">The Sizing Kit<small>pop off · milano</small></p>
+        </div>
+        <!-- the card with the grey ribbon -->
+        <div class="kt kt--card">
+          <div class="kt__paper">
+            <p class="kt__brand">The Sizing Kit<small>twelve blank tips</small></p>
+            <div class="kt__ribbon"><span>pop off</span></div>
+          </div>
+        </div>
+        <!-- the pouch with the sleeve, on black -->
+        <div class="kt kt--pouch">
+          <div class="kt__env"><canvas data-leo="ink"></canvas><div class="kt__sleeve"><span>pop off</span><small>sizing kit · 12 tips</small></div></div>
+        </div>
+        <!-- the card in front of the leopard card -->
+        <div class="kt kt--note">
+          <div class="kt__back"><canvas data-leo="ink"></canvas></div>
+          <div class="kt__front">
+            <p class="kt__brand">The Sizing Kit<small>pop off · milano</small></p>
+            <p class="kt__copy">twelve blank tips, numbered 0 to 11. hold each one on each nail, find the one that covers it edge to edge, write the number down. that's your size, forever (or until you bite them).</p>
+            <p class="kt__sig">pop off</p>
+            <p class="kt__est">est 2026</p>
+          </div>
+        </div>
+        <!-- the box and its narrow twin, on black -->
+        <div class="kt kt--box">
+          <div class="kt__slim"><canvas data-leo="ink"></canvas></div>
+          <div class="kt__carton"><i></i><p class="kt__brand">The Sizing Kit</p><p class="kt__sig">pop off</p></div>
+        </div>
+        <!-- the bag, close, black ribbon -->
+        <div class="kt kt--close">
+          <div class="kt__top"><canvas data-leo="ink"></canvas></div>
+          <i class="kt__rope"></i><i class="kt__rope kt__rope--r"></i>
+          <p class="kt__brand kt__brand--big">The Sizing Kit<small>pop off · milano</small></p>
+        </div>
+      </div>
+      <div class="kit__buy">
+        <p class="kit__k">the sizing kit</p>
+        <p class="kit__line">12 blank tips, a file, a paper tape. <em>€6, back on your first set.</em></p>
+        <button class="kit__add" id="kitAdd" data-mag data-cursor="add to bag">add the kit</button>
+      </div>
+    </section>
+
+    <!-- ========== 03 · THE TIGER PANORAMA — the size finder floats over it ========== -->
+    <section class="fd" id="finder">
+      <div class="fd__pano"><div class="slot" data-img="img/SIZING/panorama.jpg" data-label="panorama.jpg · the white tiger and the jade dragon in pink blossom. wide 16:9" style="--tone:#e2a9bd"></div></div>
+      <div class="fd__card">
+        <p class="fd__k">the size finder</p>
+        <h2 class="fd__title">a ruler, <em>two minutes</em></h2>
+        <ol class="fd__how">
+          <li>lay a ruler across the widest part of each nail.</li>
+          <li>read it in millimetres, side wall to side wall.</li>
+          <li>slide each finger below. between two sizes? go bigger.</li>
+        </ol>
+        <div class="fd__pre" role="group" aria-label="quick sizes">
+          <span>or start from</span>
+          <button data-pre="xs">xs</button><button data-pre="s">s</button><button data-pre="m" class="is-on">m</button><button data-pre="l">l</button>
+        </div>
+        <div class="fd__hand" id="fdHand"><!-- five fingers drawn by js/sizing.js --></div>
+        <div class="fd__res">
+          <p class="fd__k">your sizes, thumb to pinky</p>
+          <p class="fd__nums" id="fdNums">3 · 6 · 5 · 7 · 9</p>
+          <button class="fd__save" id="fdSave" data-cursor="save">save my sizes</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER — mtrlgrl flyers, lilac ========== -->
+    <footer class="ft" id="ft">
+      <div class="ft__grid">
+        <div class="ft__tile ft__tile--lines" aria-hidden="true"><span>pop off</span><span>pop off</span><span>pop off</span><span>pop off</span><span>pop off</span></div>
+        <div class="ft__tile ft__tile--soon">
+          <p class="ft__cap">pop off · new drop</p>
+          <p class="ft__script">Coming Soon</p>
+          <p class="ft__cap" id="dropWhen">friday · 21:00</p>
+        </div>
+        <div class="ft__tile ft__tile--map">
+          <p class="ft__cap">the house</p>
+          <p class="ft__links"><a href="index.html">Home</a><a href="sets.html">The sets</a><a href="shapes.html">Shapes</a><a href="sizing.html">Sizing kit</a><a href="coven.html">The coven</a><a href="mailto:claws@popoff.studio">claws@popoff.studio</a></p>
+        </div>
+        <div class="ft__tile ft__tile--xo">
+          <p class="ft__cap">xoxo,</p>
+          <p class="ft__script ft__script--big">Pop Off</p>
+          <form class="ft__news" id="newsForm"><input type="email" placeholder="your email, kitten" aria-label="email" required /><button data-cursor="join">join</button></form>
+        </div>
+        <div class="ft__tile ft__tile--pale">
+          <p class="ft__cap">@shoppopoff</p>
+          <p class="ft__script ft__script--ghost">Claws<br />Out<br />Perfection</p>
+          <p class="ft__cap">pop off · cherry leopard set</p>
+        </div>
+        <div class="ft__tile ft__tile--it">
+          <p class="ft__cap">x o x o , &nbsp; p o p &nbsp; o f f</p>
+          <p class="ft__script ft__script--big">It Grl<br />Claws</p>
+          <p class="ft__cap">dropping every friday</p>
+        </div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 POP OFF — a concept. no real nails were bitten.</span>
+        <span data-clock>milano 00:00</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261103-1"></script>
+  <script src="js/sizing.js?v=20261103-1"></script>
+</body>
+</html>
+<!--
+      /\_/\
+     ( o.o )   size 0 to size 11.
+      > ^ <    measure twice, scratch once.
+    ghostly.grl ♥
+-->

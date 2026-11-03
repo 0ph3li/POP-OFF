@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>The coven — POP OFF</title>
+  <meta name="description" content="The coven: the girls who wear pop off. An hour early on every friday drop, a birthday set, a vote on the next one. Sign your name, it's free." />
+  <meta name="theme-color" content="#310101" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300..800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261102-24" />
+  <link rel="stylesheet" href="css/coven.css?v=20261103-4" />
+</head>
+<body data-page="coven">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="mark" viewBox="0 0 100 100">
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(90 50 50)" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(180 50 50)" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(270 50 50)" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- global fx -->
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <svg class="rip" id="rip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path /><path /><path /><path /></svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="hdr" id="hdr">
+    <a class="logo" href="index.html" aria-label="POP OFF home" data-cursor="home"><svg class="logo__mark"><use href="#mark" /></svg><span>pop</span><em>off</em></a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="sets.html">The sets</a>
+      <a href="shapes.html">Shapes</a>
+      <a href="sizing.html">Sizing</a>
+      <a href="coven.html" aria-current="page">The coven</a>
+      <button class="hdr__bag" id="bagBtn" data-cursor="your bag">bag <b id="bagN">0</b></button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== 01 · THE CAT — a black cat licks her claws, the photo is the page ========== -->
+    <section class="cv" id="cv">
+      <div class="cv__ph"><div class="slot" data-img="img/COVEN/cat.png" data-label="cat.png · a black cat licking its claws, pink tongue, cut out (it sits on the cream). portrait 2:3" data-pos="0% 100%" style="--tone:#efe1d1"></div></div>
+      <div class="cv__txt">
+        <p class="cv__k">the coven · members only, free</p>
+        <h1 class="cv__title"><span class="cv__the">the</span><span class="cv__serif">COVEN</span></h1>
+        <p class="cv__p">every girl who ever popped off a set at a dinner table and put it back on in the taxi. <b id="cvN">4,812</b> of us so far. we get the drop an hour early, a set on our birthday, and a say in what comes next.</p>
+        <a class="cv__go" href="#oath" data-jump data-cursor="sign">sign your name ↓</a>
+      </div>
+      <p class="cv__sig">the coven</p>
+    </section>
+
+    <!-- ========== 02 · THE FLYERS — six social flyers on lilac, one for each perk ========== -->
+    <section class="fl" id="fl">
+      <div class="fl__grid">
+        <div class="fly fly--ph">
+          <p class="fly__mono">po</p>
+          <div class="fly__pair">
+            <div class="slot" data-img="img/COVEN/flyer-front.jpg" data-label="flyer-front.jpg · a girl head to toe in a pink tracksuit, from the front, on white. portrait" style="--tone:#fff"></div>
+            <div class="slot" data-img="img/COVEN/flyer-back.jpg" data-label="flyer-back.jpg · the same girl from the back, on white. portrait" style="--tone:#fff"></div>
+          </div>
+          <p class="fly__cap fly__cap--script">Pop Off Coven Set</p>
+        </div>
+        <div class="fly fly--pink">
+          <p class="fly__cap">pop off coven</p>
+          <p class="fly__script">An Hour Early</p>
+          <p class="fly__cap">every friday · 20:00</p>
+        </div>
+        <div class="fly fly--white fly--names" aria-label="the coven roll">
+          <p class="fly__name">Kitten</p><p class="fly__name">Kitten</p><p class="fly__name">Kitten</p><p class="fly__name">Kitten</p><p class="fly__name">Kitten</p>
+        </div>
+        <div class="fly fly--white">
+          <p class="fly__cap">x o x o , &nbsp; p o p &nbsp; o f f</p>
+          <p class="fly__script fly__script--ink">Birthday<br />Set</p>
+          <p class="fly__cap">on us · every year</p>
+        </div>
+        <div class="fly fly--pink fly--vote">
+          <p class="fly__cap">next drop · you pick</p>
+          <p class="fly__script fly__script--sm">Vote</p>
+          <div class="vote" id="vote">
+            <button data-v="0"><span class="vote__n">Glazed Garter</span><i class="vote__bar"></i><b class="vote__p">0%</b></button>
+            <button data-v="1"><span class="vote__n">Black Cherry</span><i class="vote__bar"></i><b class="vote__p">0%</b></button>
+            <button data-v="2"><span class="vote__n">Pearl Fang</span><i class="vote__bar"></i><b class="vote__p">0%</b></button>
+          </div>
+        </div>
+        <div class="fly fly--white">
+          <p class="fly__cap">@shoppopoff</p>
+          <p class="fly__script fly__script--ghost">Sized<br />Once<br />Forever</p>
+          <p class="fly__cap">the sizing kit, free for the coven</p>
+        </div>
+      </div>
+      <p class="fl__foot">social flyers · <b>the coven</b></p>
+    </section>
+
+    <!-- ========== 03 · THE OATH — your name written in tiny stars, on paper and over the lips ========== -->
+    <section class="oath" id="oath">
+      <div class="oath__paper">
+        <p class="oath__k oath__k--tl">5 rules, one name</p>
+        <canvas class="oath__stars" id="oathA" aria-hidden="true"></canvas>
+        <p class="oath__k oath__k--br">pop off</p>
+        <ol class="oath__rules">
+          <li>file, never bite.</li>
+          <li>pop off, don't rip off.</li>
+          <li>lend a set, never a size.</li>
+          <li>tag us at 3 am.</li>
+          <li>claws out, always.</li>
+        </ol>
+      </div>
+      <div class="oath__photo">
+        <div class="slot" data-img="img/COVEN/oath.jpg" data-label="oath.jpg · a girl at night hiding her face behind long nails. landscape" data-pos="50% 30%" style="--tone:#1a1210"></div>
+        <canvas class="oath__stars" id="oathB" aria-hidden="true"></canvas>
+        <form class="oath__form" id="oathForm">
+          <label class="oath__lab" for="oathName">sign here</label>
+          <input id="oathName" maxlength="14" autocomplete="given-name" placeholder="your name" />
+          <button data-cursor="sign">swear it</button>
+        </form>
+        <p class="oath__no" id="oathNo">member no. — </p>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER — mtrlgrl flyers, lilac ========== -->
+    <footer class="ft" id="ft">
+      <div class="ft__grid">
+        <div class="ft__tile ft__tile--lines" aria-hidden="true"><span>pop off</span><span>pop off</span><span>pop off</span><span>pop off</span><span>pop off</span></div>
+        <div class="ft__tile ft__tile--soon">
+          <p class="ft__cap">pop off · new drop</p>
+          <p class="ft__script">Coming Soon</p>
+          <p class="ft__cap" id="dropWhen">friday · 21:00</p>
+        </div>
+        <div class="ft__tile ft__tile--map">
+          <p class="ft__cap">the house</p>
+          <p class="ft__links"><a href="index.html">Home</a><a href="sets.html">The sets</a><a href="shapes.html">Shapes</a><a href="sizing.html">Sizing kit</a><a href="coven.html">The coven</a><a href="mailto:claws@popoff.studio">claws@popoff.studio</a></p>
+        </div>
+        <div class="ft__tile ft__tile--xo">
+          <p class="ft__cap">xoxo,</p>
+          <p class="ft__script ft__script--big">Pop Off</p>
+          <form class="ft__news" id="newsForm"><input type="email" placeholder="your email, kitten" aria-label="email" required /><button data-cursor="join">join</button></form>
+        </div>
+        <div class="ft__tile ft__tile--pale">
+          <p class="ft__cap">@shoppopoff</p>
+          <p class="ft__script ft__script--ghost">Claws<br />Out<br />Perfection</p>
+          <p class="ft__cap">pop off · cherry leopard set</p>
+        </div>
+        <div class="ft__tile ft__tile--it">
+          <p class="ft__cap">x o x o , &nbsp; p o p &nbsp; o f f</p>
+          <p class="ft__script ft__script--big">It Grl<br />Claws</p>
+          <p class="ft__cap">dropping every friday</p>
+        </div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 POP OFF — a concept. no real nails were bitten.</span>
+        <span data-clock>milano 00:00</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261103-1"></script>
+  <script src="js/coven.js?v=20261103-2"></script>
+</body>
+</html>
+<!--
+      /\_/\
+     ( -.- )   lick, file, repeat.
+      > ^ <    welcome to the coven.
+    ghostly.grl ♥
+-->

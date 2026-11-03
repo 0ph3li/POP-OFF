@@ -1,0 +1,88 @@
+/* =========================================================
+   POP OFF — coven.css (the coven)
+   the black cat licking her claws → six social flyers on
+   lilac → the oath, your name in tiny stars
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+/* ========== 01 · THE CAT ========== */
+.cv { position: relative; display: grid; grid-template-columns: 58fr 42fr; min-height: 100svh; background: #efe1d1; color: var(--ink); overflow: hidden; }
+.cv__ph { position: relative; overflow: hidden; }
+.cv__ph .slot { position: absolute; inset: 6% 0 0; }
+.cv__ph .slot > img { object-fit: contain; } /* the cat is cut out: all of her, sitting on the cream */
+.cv__txt { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 120px var(--gut) 80px clamp(20px, 4vw, 60px); max-width: 560px; }
+.cv__k { font-size: 10px; font-weight: 800; letter-spacing: .26em; text-transform: uppercase; color: var(--cherry); }
+.cv__title { display: flex; flex-direction: column; margin: 14px 0 22px; font-weight: 400; line-height: .9; }
+.cv__the { font-family: var(--f-script); font-size: clamp(54px, 6vw, 96px); line-height: .7; padding-left: .1em; color: #c45d7c; }
+.cv__serif { font-family: var(--f-serif); font-size: clamp(64px, 9vw, 150px); letter-spacing: -.03em; }
+.cv__p { max-width: 400px; font-family: var(--f-serif); font-style: italic; font-size: clamp(16px, 1.45vw, 20px); line-height: 1.38; }
+.cv__p b { font-style: normal; font-weight: 600; color: var(--cherry); }
+.cv__go { align-self: flex-start; margin-top: 28px; font-size: 10px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+.cv__sig { position: absolute; z-index: 3; left: 47vw; bottom: 22px; font-family: var(--f-sig); font-size: clamp(26px, 2.4vw, 36px); line-height: 1; color: var(--cherry); }
+
+/* ========== 02 · THE FLYERS ========== */
+.fl { padding: clamp(80px, 11vw, 160px) var(--gut) clamp(50px, 6vw, 80px); background: #dfd0da; }
+.fl__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(8px, 1vw, 14px); max-width: 940px; margin: 0 auto; }
+.fly { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between; aspect-ratio: 4 / 5.4; padding: clamp(18px, 2.4vw, 34px) 14px; overflow: hidden; text-align: center; }
+.fly--white { background: #fff; color: var(--ink); }
+.fly--pink { background: #eccfdc; color: #fff; }
+.fly__cap { position: relative; z-index: 2; font-size: clamp(7px, .62vw, 9px); font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+.fly--pink .fly__cap { color: #fff; text-shadow: 0 0 1px rgba(196, 93, 124, .35); }
+.fly__script { margin: auto 0; font-family: var(--f-script); font-size: clamp(34px, 4.4vw, 66px); line-height: .95; padding: .1em .15em; text-shadow: 0 0 1px rgba(196, 93, 124, .25); }
+.fly__script--ink { color: var(--ink); transform: rotate(-6deg); }
+.fly__script--ghost { color: #f1cfdd; transform: rotate(-4deg); }
+.fly__script--sm { margin: 4px 0 0; font-size: clamp(30px, 3.4vw, 52px); }
+/* the photo flyer */
+.fly--ph { background: #fff; padding: 14px 14px 18px; }
+.fly__pair { flex: 1; display: grid; grid-template-columns: 1fr 1fr; width: 100%; margin: 6px 0 8px; }
+.fly__pair .slot { position: relative; height: 100%; }
+.fly__pair .slot > img { object-fit: contain; }
+.fly__mono { font-family: var(--f-script); font-size: 26px; line-height: 1; }
+.fly__cap--script { font-family: var(--f-script); font-size: clamp(14px, 1.3vw, 18px); font-weight: 400; letter-spacing: 0; text-transform: none; }
+/* the roll: one name, five times */
+.fly--names { justify-content: center; gap: 0; padding: 10px 6px; }
+.fly__name { font-family: var(--f-script); font-size: clamp(30px, 3.6vw, 54px); line-height: 1.12; white-space: nowrap; max-width: 100%; }
+/* the vote */
+.fly--vote { justify-content: flex-start; gap: 6px; }
+.vote { display: grid; gap: 8px; width: 100%; margin-top: auto; padding: 0 clamp(4px, 1vw, 12px) 4px; }
+.vote button { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 99px; background: rgba(255, 255, 255, .55); color: #b44a6c; font-size: clamp(9px, .8vw, 11px); font-weight: 800; letter-spacing: .1em; text-transform: uppercase; overflow: hidden; transition: background .3s; }
+.vote button:hover { background: rgba(255, 255, 255, .85); }
+.vote__n, .vote__p { position: relative; z-index: 2; white-space: nowrap; }
+.vote__p { opacity: 0; transition: opacity .4s; }
+.vote__bar { position: absolute; inset: 0 auto 0 0; width: 0; background: #f6b9cf; border-radius: inherit; transition: width .9s var(--ease); }
+.vote.is-done .vote__p { opacity: 1; }
+.vote button.is-mine { background: #fff; }
+.vote button.is-mine .vote__bar { background: #ee8fb8; }
+.fl__foot { margin-top: clamp(30px, 4vw, 50px); text-align: center; color: #fff; font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+
+/* ========== 03 · THE OATH ========== */
+.oath { position: relative; background: var(--cream); }
+.oath__paper { position: relative; height: clamp(380px, 52svh, 540px); background: #f5efe8 radial-gradient(circle at 30% 40%, #fbf7f2, transparent 60%); overflow: hidden; }
+.oath__stars { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.oath__k { position: absolute; z-index: 2; font-family: var(--f-serif); font-style: italic; font-size: 12px; letter-spacing: .04em; color: #b89a8c; }
+.oath__k--tl { top: 24px; left: var(--gut); }
+.oath__k--br { right: var(--gut); bottom: 22px; font-style: normal; font-family: var(--f-sans); font-weight: 700; font-size: 9px; letter-spacing: .3em; text-transform: uppercase; }
+.oath__rules { position: absolute; z-index: 2; left: var(--gut); bottom: 22px; display: flex; flex-wrap: wrap; gap: 4px 18px; max-width: 70%; list-style: none; counter-reset: r; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #a8644f; }
+.oath__rules li { counter-increment: r; }
+.oath__rules li::before { content: counter(r) '. '; color: #d4b2a3; }
+.oath__photo { position: relative; height: clamp(420px, 70svh, 680px); overflow: hidden; color: #fff; }
+.oath__photo .slot { position: absolute; inset: 0; }
+.oath__photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(20, 4, 4, .8), transparent 50%); pointer-events: none; }
+.oath__photo .oath__stars { z-index: 2; height: 70%; }
+.oath__form { position: absolute; z-index: 3; left: 50%; bottom: clamp(56px, 8vw, 90px); transform: translateX(-50%); display: flex; align-items: center; gap: 0; width: min(520px, calc(100% - 2 * var(--gut))); border-bottom: 1px solid rgba(255, 255, 255, .8); }
+.oath__lab { flex: none; padding-right: 14px; font-family: var(--f-sig); font-size: 28px; line-height: 1; }
+.oath__form input { flex: 1; min-width: 0; padding: 12px 0; background: none; border: 0; outline: 0; color: #fff; font-family: var(--f-serif); font-style: italic; font-size: clamp(18px, 1.8vw, 24px); }
+.oath__form input::placeholder { color: rgba(255, 255, 255, .6); }
+.oath__form button { flex: none; padding: 10px 0 10px 14px; font-size: 10px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; color: #fff; white-space: nowrap; }
+.oath__no { position: absolute; z-index: 3; left: 0; right: 0; bottom: 24px; text-align: center; font-size: 9px; font-weight: 800; letter-spacing: .3em; text-transform: uppercase; opacity: .85; }
+
+/* ========== responsive ========== */
+@media (max-width: 860px) {
+  .cv { grid-template-columns: 1fr; }
+  .cv__ph { height: 62svh; }
+  .cv__txt { padding: 40px var(--gut) 90px; }
+  .cv__sig { left: auto; right: var(--gut); top: calc(62svh + 8px); bottom: auto; }
+  .fl__grid { grid-template-columns: repeat(2, 1fr); }
+  .oath__rules { max-width: none; right: var(--gut); bottom: 46px; }
+  .oath__k--br { bottom: 18px; }
+}

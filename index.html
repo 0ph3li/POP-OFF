@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>POP OFF — claws, made to come off</title>
+  <meta name="description" content="POP OFF is a press-on nail house. Hand-painted claws, 24 tips a set, on in ten minutes in the back of a taxi, off whenever you want, in one piece, ready for next time." />
+  <meta name="theme-color" content="#310101" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300..800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261102-16" />
+  <link rel="stylesheet" href="css/index.css?v=20261102-16" />
+</head>
+<body class="is-loading" data-page="home">
+
+  <!-- the nail tip + the mark, drawn once, used everywhere -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="tip" viewBox="0 0 40 80"><path d="M20 1.5C31 1.5 37 21 37 45V79H3V45C3 21 9 1.5 20 1.5Z" /></symbol>
+      <symbol id="mark" viewBox="0 0 100 100">
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(90 50 50)" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(180 50 50)" />
+        <path d="M50 4C58 4 61 22 61 38L50 50L39 38C39 22 42 4 50 4Z" transform="rotate(270 50 50)" />
+      </symbol>
+      <symbol id="spark" viewBox="0 0 100 100"><path d="M50 0C53 38 62 47 100 50C62 53 53 62 50 100C47 62 38 53 0 50C38 47 47 38 50 0Z" /></symbol>
+    </defs>
+  </svg>
+
+  <!-- ================= LOADER — the cinnamon ad: the name written in tiny stars, paper on top, lips below ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="ld-paper">
+      <p class="ld-k">24 hand-painted tips · press-on set</p>
+      <canvas class="ld-stars" id="ldStars"></canvas>
+      <p class="ld-brand">POP OFF</p>
+    </div>
+    <div class="ld-photo">
+      <div class="slot" data-img="img/HOME/loader-lips.png" data-label="loader-lips · biting a cinnamon bun, leopard and cherry nails, white background. landscape" data-pos="50% 40%" style="--tone:#c99a86"></div>
+      <canvas class="ld-stars" id="ldStars2"></canvas>
+    </div>
+  </div>
+
+  <!-- global fx -->
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__dot"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <svg class="rip" id="rip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path /><path /><path /><path /></svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="hdr" id="hdr">
+    <a class="logo" href="index.html" aria-label="POP OFF home" data-cursor="home"><svg class="logo__mark"><use href="#mark" /></svg><span>pop</span><em>off</em></a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="sets.html">The sets</a>
+      <a href="shapes.html">Shapes</a>
+      <a href="sizing.html">Sizing</a>
+      <a href="coven.html">The coven</a>
+      <button class="hdr__bag" id="bagBtn" data-cursor="your bag">bag <b id="bagN">0</b></button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== 01 · HERO — mowenkur, as it is: the face, the hands, the pink name in the middle ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__media">
+        <div class="slot hero__img" data-img="img/HOME/hero.png" data-label="hero · a face framed by two hands, long milky-pink stilettos, fur collar. 16:9" data-pos="50% 40%" style="--tone:#c9967f"></div>
+      </div>
+      <p class="hero__k hero__k--l">beauty / nails / press-on / hand-painted / reusable</p>
+      <p class="hero__k hero__k--r">pop off</p>
+      <div class="hero__brand">
+        <svg class="hero__mark"><use href="#mark" /></svg>
+        <h1 class="hero__word" aria-label="pop off"><span class="hero__pop">pop</span><span class="hero__off">off</span></h1>
+        <p class="hero__sub">press-on house / brand of claws</p>
+      </div>
+    </section>
+
+    <!-- ========== 02 · PRESS ON. — nailtherapy + LACQ atelier: two cards on white ========== -->
+    <section class="lacq" id="lacq">
+      <div class="lacq__card lacq__card--a">
+        <div class="lacq__hand"><div class="slot" data-img="img/HOME/chain-hand.png" data-label="chain-hand · two hands on a silver record, chains and skull rings, chrome stilettos. on white" style="--tone:#7d6a63"></div></div>
+        <p class="lacq__word"><span>press</span><b>on.</b></p>
+      </div>
+      <div class="lacq__card lacq__card--b">
+        <div class="lacq__plate">
+          <p class="lacq__chrome">Pop Off</p>
+          <small>ATELIER</small>
+        </div>
+        <div class="slot lacq__hands" data-img="img/HOME/chrome-hands.jpg" data-label="chrome-hands · hands on a chrome bustier, black chrome claws, cuffs. square" style="--tone:#2c2828"></div>
+      </div>
+    </section>
+
+    <!-- ========== 02 · CLAWS OUT — the 'for such a time' poster ========== -->
+    <section class="out" id="out">
+      <p class="out__top">pop off<small>press-on house, est. 2026</small></p>
+      <div class="out__band"><div class="slot" data-img="img/HOME/eyes-band.jpg" data-label="eyes-band · leopard eyes, a wide strip" style="--tone:#8e8170"></div></div>
+      <div class="out__stack">
+        <div class="slot out__ph" data-img="img/HOME/coven-01.png" data-label="coven-01 · a girl in a car, leopard stilettos, skull rings. landscape" style="--tone:#5b4636"></div>
+        <div class="slot out__ph" data-img="img/HOME/coven-02.jpg" data-label="coven-02 · bare legs on a leopard throw, nude claws. landscape" style="--tone:#b07a6c"></div>
+        <div class="slot out__ph" data-img="img/HOME/coven-03.jpg" data-label="coven-03 · a finger on the tongue, cherry square nails. landscape" style="--tone:#4e3a2f"></div>
+      </div>
+      <h2 class="out__script" aria-label="claws out.">
+        <span class="out__w out__w--1">Claws</span>
+        <span class="out__w out__w--2">out.</span>
+        <svg class="out__swash" viewBox="0 0 1000 300" preserveAspectRatio="none"><path d="M20 250C180 190 300 40 520 70S900 230 990 30" /></svg>
+      </h2>
+      <p class="out__q out__q--tr">I don't bite my nails —<br />I file them into opinions —<br />you call it a manicure</p>
+      <p class="out__q out__q--br">you book the salon —<br />I press them on in the taxi<br /><br />pop off 10:00</p>
+      <p class="out__q out__q--bl">no appointment<br />no drill<br />no damage</p>
+      <p class="out__sig">po</p>
+    </section>
+
+    <!-- ========== 03 · THE SET OF THE MONTH — girls night poster ========== -->
+    <section class="set" id="set">
+      <div class="set__paper">
+        <i class="dash dash--l"></i><i class="dash dash--r"></i>
+        <p class="set__tiny">set no. 07<br />the october drop</p>
+        <h2 class="set__title">
+          <span class="set__serif">CHERRY</span>
+          <svg class="set__spark"><use href="#spark" /></svg>
+          <span class="set__script">Leopard</span>
+        </h2>
+        <p class="set__ru">glossy dried blood,<br />spots on the first and the last,<br />a silver cross in the middle</p>
+        <dl class="set__dl">
+          <div><dt><i class="dot"></i>shape</dt><dd>square, long</dd></div>
+          <div><dt>length</dt><dd>2.4 cm <em>of attitude</em></dd></div>
+          <div><dt>in the box</dt><dd>24 tips <em>· 12 sizes</em></dd></div>
+        </dl>
+        <p class="set__price">€38 <span>—</span> <i class="dot dot--sm"></i></p>
+        <button class="set__add" id="addSet" data-mag data-cursor="add to bag">add to bag</button>
+      </div>
+      <div class="set__photo">
+        <div class="slot" data-img="img/HOME/set-07.png" data-label="set-07 · a finger on the lip, cherry nails, two leopard, a silver cross. 3:4" data-pos="50% 30%" style="--tone:#6b4a3e"></div>
+        <p class="set__by">by pop off<br />painted in milano</p>
+        <p class="set__dj">painted by<br /><b>GIULIA</b><br /><b>BEA</b></p>
+        <i class="dash dash--r2"></i>
+      </div>
+      <div class="set__band">
+        <p class="set__ghost" aria-hidden="true">Leopard</p>
+        <div class="set__star">
+          <div class="slot" data-img="img/HOME/star-eye.png" data-label="star-eye · a chrome claw at the corner of an eye. square" style="--tone:#9c8676"></div>
+        </div>
+        <i class="dot dot--b"></i><i class="dot dot--w"></i>
+        <svg class="set__spark set__spark--b"><use href="#spark" /></svg>
+        <p class="set__list">glue <i>✦</i> tabs <i>✦</i> mini file<br />cuticle stick <i>✦</i> dress code: cherry &amp; black</p>
+        <p class="set__rsvp">rsvp / questions<br />@pop.off.claws</p>
+      </div>
+    </section>
+
+    <!-- ========== ALMOND — the orchids poster: a sliced flower, here a sliced claw ========== -->
+    <section class="almond" id="almond">
+      <h2 class="almond__script">Stiletto</h2>
+      <p class="almond__side">2026<br />lovely<br />weapon</p>
+      <p class="almond__sans">Exotic Shape</p>
+      <div class="almond__img" id="almondImg" data-src="img/HOME/almond.png" data-label="almond · two hands of long milky stilettos, a silver ring, on white. square"></div>
+      <div class="almond__pills"><span>signature</span><span>signature</span></div>
+      <p class="almond__txt">Stiletto is the shape that ends the conversation. Milky, sheer, filed to a point that could open a letter or a lie. It makes every finger look longer, every hand look expensive, and every argument look already won. Ours come in four lengths, hand-painted, filed by hand, ready to press on in the back of a taxi.</p>
+      <p class="almond__foot">♥♥ &nbsp; a stiletto is a claw with a law degree. &nbsp; ♥♥</p>
+    </section>
+
+    <!-- ========== 04 · COLOR PAIRING — dried blood × leopard ========== -->
+    <section class="pair" id="pair">
+      <div class="pair__bg"><div class="slot" data-img="img/HOME/cherries.png" data-label="cherries · two black cherries, one bitten, on white. the glass blurs them" data-pos="72% 80%" style="--tone:#2a0406"></div></div>
+      <div class="pair__glass" aria-hidden="true"></div>
+      <p class="pair__k">color pairing <span id="pairN">01 / 05</span></p>
+      <div class="pair__card" data-cursor="next pairing" id="pairCard">
+        <div class="pair__top" id="pairTop"><p class="pair__name" id="pairA">DRIED BLOOD</p><p class="pair__hex" id="pairHex">#310101</p></div>
+        <div class="pair__bot" id="pairBot"><canvas id="pairCanvas"></canvas><p class="pair__name pair__name--b" id="pairB">LEOPARD</p></div>
+      </div>
+      <p class="pair__note" id="pairNote">wear it to a funeral. yours or his.</p>
+      <div class="pair__nav">
+        <button id="pairPrev" data-cursor="back" aria-label="previous pairing">←</button>
+        <span>pick your poison</span>
+        <button id="pairNext" data-cursor="next" aria-label="next pairing">→</button>
+      </div>
+    </section>
+
+    <!-- ========== 05 · HOW TO POP OFF — the cat licks her claws ========== -->
+    <section class="claws" id="claws">
+      <div class="claws__photo">
+        <div class="slot" data-img="img/HOME/claw.jpg" data-label="claw · a black cat licking her paw, claws out. square" data-pos="40% 50%" style="--tone:#1b1412"></div>
+        <p class="claws__cap">she licks them clean. you rinse them in warm water.</p>
+      </div>
+      <div class="claws__text">
+        <h2 class="claws__title"><span class="line-mask"><span class="ln">how to</span></span><span class="line-mask"><span class="ln"><em>pop off</em></span></span></h2>
+        <ol class="claws__steps">
+          <li><b>01</b><h3>press</h3><p>clean, pick your sizes, glue or a tab, press for thirty seconds. count like you mean it.</p></li>
+          <li><b>02</b><h3>click</h3><p>tap them on the table. if it clicks, it's on. wear them two weeks, or one night. we don't judge.</p></li>
+          <li><b>03</b><h3>pop off</h3><p>warm water, a drop of oil, the cuticle stick. they come off in one piece. back in the box for next time.</p></li>
+        </ol>
+        <div class="scratch" id="scratch" data-cursor="scratch">
+          <div class="scratch__under">
+            <p>you scratched it, kitten</p>
+            <strong>CLAWSOUT</strong>
+            <span>10% off your first set</span>
+          </div>
+          <canvas class="scratch__cv" id="scratchCv"></canvas>
+          <p class="scratch__hint" id="scratchHint">scratch here ✦ claws only</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 06 · WORN BY THE COVEN — dezia washington, black ========== -->
+    <section class="worn" id="worn">
+      <div class="worn__head">
+        <p class="worn__mast" aria-hidden="true">THE COVEN</p>
+        <div class="worn__stripes">
+          <div class="slot" data-img="img/HOME/worn-stripes.jpg" data-label="worn-stripes · a girl on pink satin with a camcorder, seen from above. portrait" style="--tone:#a68a68"></div>
+          <i></i><i></i><i></i><i></i>
+          <p class="worn__mag">POP OFF · issue no. 07 <span>16</span></p>
+        </div>
+        <div class="worn__copy">
+          <p class="worn__big"><span class="worn__the">The</span> <mark>perception</mark><br />of a set &nbsp; transcends<br />nails &nbsp; into</p>
+          <i class="worn__rule"></i>
+          <p class="worn__feel">attitude</p>
+          <p class="worn__small">taking a mess &nbsp;&nbsp; and turning it into &nbsp;&nbsp; a weapon you can take off &nbsp;&nbsp; at dinner</p>
+        </div>
+      </div>
+      <div class="worn__field" id="wornField">
+        <p class="worn__w worn__w--a">worn on</p>
+        <div class="slot worn__ph worn__ph--1" data-img="img/HOME/worn-01.jpg" data-label="worn-01 · a hand over a face, tattooed fingers, white claws. 4:3" style="--tone:#3a3a3a" data-depth=".5"></div>
+        <div class="slot worn__ph worn__ph--2" data-img="img/HOME/worn-02.jpg" data-label="worn-02 · a glass of red, a cigarette, nude claws. 4:3" style="--tone:#555" data-depth="1"></div>
+        <div class="slot worn__ph worn__ph--3" data-img="img/HOME/worn-03.jpg" data-label="worn-03 · a pink flip phone, fur, rhinestone claws. square" style="--tone:#444" data-depth=".7"></div>
+        <div class="slot worn__ph worn__ph--4" data-img="img/HOME/worn-04.jpg" data-label="worn-04 · a star sweater, cross rings, 3D skull claws. portrait" style="--tone:#4b4b4b" data-depth="1.3"></div>
+        <p class="worn__w worn__w--b">screens</p>
+        <p class="worn__and">and</p>
+        <p class="worn__w worn__w--c">cheeks</p>
+        <p class="worn__count"><b id="covenN">4,812</b> girls who tag us at 3 am</p>
+      </div>
+      <div class="rules" id="rules">
+        <p class="rules__k">care <s>guidelines</s></p>
+        <div class="rules__grid">
+          <div class="rules__spec">
+            <p class="rules__label">Manrope</p>
+            <p class="rules__aa">Aa</p>
+            <p class="rules__abc">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmnopqrstuvwxyz<br />0123456789<br />!@#$%^&amp;*()</p>
+          </div>
+          <div class="rules__rows">
+            <div><p class="rules__label">Title</p><p class="rules__title">Claws Out</p></div>
+            <div><p class="rules__label">Lead</p><p class="rules__lead"><s>bite</s> file, press, pop off, repeat</p></div>
+            <div><p class="rules__label">Rules</p><p class="rules__para">never on wet hands. never on oily nails. press for thirty seconds, then don't touch your hair for an hour. wear them two weeks, or one night. take them off in warm water, never by force. keep them in the box. lend them only to people you'd lend your lipstick to.</p></div>
+          </div>
+          <div class="rules__spec rules__spec--script">
+            <p class="rules__label rules__label--script">Great Vibes</p>
+            <p class="rules__aa rules__aa--script">Aa</p>
+            <p class="rules__abc rules__abc--script">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmnopqrstuvwxyz<br />0123456789</p>
+          </div>
+        </div>
+        <p class="rules__ghost">Etiquette</p>
+        <p class="rules__mag"><span>POP OFF</span><span>20</span><span>21</span><span>POP OFF</span></p>
+      </div>
+    </section>
+
+    <!-- ========== VELVET — the café table, three textures, tins everywhere ========== -->
+    <section class="velvet" id="velvet">
+      <div class="velvet__hero">
+        <div class="slot" data-img="img/HOME/velvet-table.png" data-label="velvet-table · a pink café table on the street, iced coffees, a leopard purse, dice. landscape" style="--tone:#8f7570"></div>
+        <p class="velvet__txt">Our sets are not just a way to cover your nails, they are an experiment of colour, memories and nerve. They feel like a long walk with a loved one, like a coffee in the morning, like a first slap.</p>
+        <p class="velvet__script">Pop off</p>
+        <p class="velvet__sub">claws &amp; much more</p>
+      </div>
+      <div class="velvet__tex">
+        <div class="slot" data-img="img/HOME/tex-milk.jpg" data-label="tex-milk · milky white polish, a brush" style="--tone:#e9e3d6"><span>#E1E0DB</span></div>
+        <div class="slot" data-img="img/HOME/tex-cocoa.jpg" data-label="tex-cocoa · cocoa polish, glossy" style="--tone:#4a2b17"><span>#40251E</span></div>
+        <div class="slot" data-img="img/HOME/tex-strawberry.jpg" data-label="tex-strawberry · peach-pink polish dripping" style="--tone:#e49487"><span>#E49487</span></div>
+      </div>
+      <div class="velvet__tins" id="tins">
+        <div class="tin tin--w"><p class="tin__script">Pop off</p></div>
+        <div class="tin tin--b"><p class="tin__line">this is<br />the best part<br />of your hands</p><i class="tin__lace"></i></div>
+        <div class="tin tin--w"><p class="tin__small">Did you miss this feeling? It feels like home, like a warm embrace, like the click of a nail on a glass. It's not just a nail, it's something that unites millions of girls around the world.</p><p class="tin__script">Pop off</p></div>
+        <div class="tin tin--g"><p class="tin__mono">po</p></div>
+        <div class="tin tin--b tin--oval"><p class="tin__script">Pop off</p></div>
+        <div class="tin tin--w"><p class="tin__mono tin__mono--pink">po</p></div>
+      </div>
+    </section>
+
+    <!-- ========== 07 · THE BOX — black flat-lay, pink box, leopard bag ========== -->
+    <section class="box" id="box">
+      <h2 class="box__title"><span>the</span> <em>box</em></h2>
+      <div class="box__lay" id="boxLay">
+        <div class="bx bx--env"><i class="bx__letter"></i><span>POP OFF</span></div>
+        <div class="bx bx--post"><div class="bx__ig"><i></i><div class="slot" data-img="img/HOME/post.png" data-label="post · a roaring leopard, cut out. portrait" style="--tone:#c7a27c"></div><p>♥ ◯ ➤</p></div></div>
+        <div class="bx bx--kraft"><div class="bx__card bx__card--leo"><canvas data-leo="warm"></canvas></div></div>
+        <div class="bx bx--kraft"><div class="bx__card bx__card--pink"><span>POP OFF</span><small>claws, made to come off</small></div></div>
+        <div class="bx bx--pink"><span>POP OFF</span><small>press-on house</small><i class="bx__bow"></i><i class="bx__bow bx__bow--2"></i></div>
+        <div class="bx bx--bag"><canvas data-leo="cool"></canvas><i class="bx__handle"></i><span>POP OFF</span><small>press-on house</small></div>
+      </div>
+      <ul class="box__list">
+        <li><b>24</b> tips in 12 sizes</li>
+        <li><b>01</b> nail glue, the good one</li>
+        <li><b>24</b> sticky tabs, for one-nighters</li>
+        <li><b>01</b> mini file + cuticle stick</li>
+        <li><b>02</b> prep pads</li>
+        <li><b>01</b> love letter, handwritten-ish</li>
+      </ul>
+      <p class="box__k">@pop.off.claws</p>
+    </section>
+
+    <!-- ========== 08 · REFER A FRIEND — the skin goddess card ========== -->
+    <section class="refer" id="refer">
+      <canvas class="refer__bg" data-leo="cool" aria-hidden="true"></canvas>
+      <div class="refer__stage">
+        <div class="card" id="card">
+          <div class="card__face card__face--front">
+            <canvas data-leo="fur"></canvas>
+            <p class="card__brand">POP <span>O</span>FF</p>
+            <p class="card__k">referral card</p>
+          </div>
+          <form class="card__face card__face--back" id="referForm" autocomplete="off">
+            <p class="card__refer"><span>Refer</span> A FRIEND</p>
+            <p class="card__deal">and you'll both get €10 off your next set</p>
+            <label>Referred to: <input name="to" maxlength="24" /></label>
+            <label>Referred by: <input name="by" maxlength="24" /></label>
+            <div class="card__foot">
+              <button type="submit" class="card__go" data-cursor="send the claws">send the claws</button>
+              <canvas class="card__qr" id="cardQr" width="25" height="25"></canvas>
+            </div>
+          </form>
+        </div>
+        <button class="refer__flip" id="cardFlip" data-cursor="flip">flip the card ↻</button>
+      </div>
+      <p class="refer__cap">The Pop Off stationery<br />share it with a girl who still bites hers</p>
+    </section>
+
+    <!-- ========== FOOTER — mtrlgrl flyers, lilac ========== -->
+    <footer class="ft" id="ft">
+      <div class="ft__grid">
+        <div class="ft__tile ft__tile--lines" aria-hidden="true"><span>pop off</span><span>pop off</span><span>pop off</span><span>pop off</span><span>pop off</span></div>
+        <div class="ft__tile ft__tile--soon">
+          <p class="ft__cap">pop off · new drop</p>
+          <p class="ft__script">Coming Soon</p>
+          <p class="ft__cap" id="dropWhen">friday · 21:00</p>
+        </div>
+        <div class="ft__tile ft__tile--map">
+          <p class="ft__cap">the house</p>
+          <p class="ft__links"><a href="sets.html">The sets</a><a href="shapes.html">Shapes</a><a href="sizing.html">Sizing kit</a><a href="coven.html">The coven</a><a href="mailto:claws@popoff.studio">claws@popoff.studio</a></p>
+        </div>
+        <div class="ft__tile ft__tile--xo">
+          <p class="ft__cap">xoxo,</p>
+          <p class="ft__script ft__script--big">Pop Off</p>
+          <form class="ft__news" id="newsForm"><input type="email" placeholder="your email, kitten" aria-label="email" required /><button data-cursor="join">join</button></form>
+        </div>
+        <div class="ft__tile ft__tile--pale">
+          <p class="ft__cap">@shoppopoff</p>
+          <p class="ft__script ft__script--ghost">Claws<br />Out<br />Perfection</p>
+          <p class="ft__cap">pop off · cherry leopard set</p>
+        </div>
+        <div class="ft__tile ft__tile--it">
+          <p class="ft__cap">x o x o , &nbsp; p o p &nbsp; o f f</p>
+          <p class="ft__script ft__script--big">It Grl<br />Claws</p>
+          <p class="ft__cap">dropping every friday</p>
+        </div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 POP OFF — a concept. no real nails were bitten.</span>
+        <span data-clock>milano 00:00</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261103-1"></script>
+  <script src="js/index.js?v=20261103-4"></script>
+</body>
+<!--
+   *    /\_/\      ✦
+       ( o.o )   <3  ghostly.grl
+   ✦    > ^ <   💅     *
+       claws out. pop off.
+-->
+</html>

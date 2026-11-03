@@ -1,0 +1,90 @@
+/* =========================================================
+   POP OFF — shapes.css (the four shapes)
+   RÊVESCAPE photo → Stems by Lem submark → the palette cards
+   with gold clouds → the tiger palette quiz
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+/* ========== 01 · RÊVESCAPE ========== */
+.sh { position: relative; height: 100svh; min-height: 560px; overflow: hidden; background: #d8c3c6; color: #fff; }
+.sh__ph { position: absolute; inset: 0; }
+.sh__ph .slot { position: absolute; inset: 0; }
+.sh::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(49, 1, 1, .38), transparent 42%); pointer-events: none; }
+.sh__tiny { position: absolute; z-index: 2; left: var(--gut); bottom: 34px; font-size: 10px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; line-height: 1.6; }
+.sh__title { position: absolute; z-index: 2; right: var(--gut); bottom: 18px; display: flex; flex-direction: column; align-items: flex-end; font-weight: 400; line-height: 1; }
+.sh__k { font-family: var(--f-serif); font-style: italic; font-size: clamp(18px, 2vw, 28px); margin-right: 1em; }
+.sh__script { font-family: var(--f-script); font-size: clamp(110px, 17vw, 280px); line-height: .95; padding: 0 .08em .1em; text-shadow: 0 2px 30px rgba(49, 1, 1, .25); }
+.sh__go { position: absolute; z-index: 2; left: 50%; bottom: 30px; transform: translateX(-50%); font-size: 10px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+
+/* ========== 02 · STEMS BY LEM — the submark ========== */
+.sub__half { position: relative; display: grid; place-items: center; min-height: 92svh; overflow: hidden; }
+.sub__half--pink { background: #e8b5aa; color: #2b1a17; }
+.sub__half--dark { background: #2c2023; color: #f0c2b4; }
+.sub__half--dark .slot { position: absolute; inset: 0; opacity: .55; }
+.sub__c { position: absolute; z-index: 2; font-family: var(--f-serif); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+.sub__c--tl { top: 28px; left: var(--gut); } .sub__c--tr { top: 28px; right: var(--gut); }
+.sub__c--bl { bottom: 28px; left: var(--gut); } .sub__c--br { bottom: 28px; right: var(--gut); }
+.sub__mark { position: relative; z-index: 2; width: min(420px, 70vw); height: auto; aspect-ratio: 42 / 31; overflow: visible; stroke: currentColor; stroke-width: 2.6; }
+.sub__line { position: absolute; bottom: 12%; left: 0; right: 0; text-align: center; font-family: var(--f-serif); font-style: italic; font-size: clamp(16px, 1.6vw, 22px); line-height: 1.35; }
+
+/* ========== 03 · THE PALETTE CARDS ========== */
+.cards { padding: clamp(80px, 10vw, 140px) var(--gut); background: var(--bone); }
+.cards__panel { max-width: 860px; margin: 0 auto; padding: clamp(22px, 3vw, 34px) clamp(14px, 2vw, 22px) clamp(14px, 2vw, 22px); border-radius: 30px; background: #262222; box-shadow: 0 40px 80px -40px rgba(49, 1, 1, .5); }
+.cards__title { text-align: center; color: #fff; font-family: var(--f-sans, 'Manrope'), sans-serif; font-weight: 800; font-size: clamp(22px, 3vw, 36px); letter-spacing: .04em; }
+.cards__sub { text-align: center; color: #fff; font-weight: 800; font-size: clamp(12px, 1.3vw, 16px); letter-spacing: .1em; margin: 6px 0 clamp(20px, 2.6vw, 30px); }
+.cards__list { display: grid; gap: clamp(10px, 1.2vw, 14px); }
+.card { position: relative; display: block; width: 100%; border-radius: 22px; overflow: hidden; text-align: left; background: linear-gradient(90deg, var(--c0), var(--c1)); color: var(--ink2); }
+.card__top { position: relative; display: flex; width: 100%; text-align: left; color: inherit; align-items: center; min-height: clamp(120px, 15vw, 170px); padding: 0 clamp(18px, 3vw, 34px); }
+.card canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.card__txt { position: relative; z-index: 2; }
+.card__name, .card__data { display: block; }
+.card__name { font-weight: 800; font-size: clamp(20px, 2.4vw, 30px); letter-spacing: .02em; text-transform: uppercase; }
+.card__data { margin-top: 4px; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; line-height: 1.5; opacity: .85; }
+.card__tip { position: absolute; z-index: 2; right: clamp(50px, 9vw, 120px); top: 50%; height: clamp(150px, 19vw, 220px); transform: translateY(-50%) rotate(90deg); filter: drop-shadow(0 10px 14px rgba(49, 1, 1, .25)); transition: transform .6s var(--ease); }
+.card:hover .card__tip { transform: translateY(-50%) rotate(78deg) scale(1.06); }
+.card__more { position: relative; z-index: 2; display: grid; grid-template-rows: 0fr; transition: grid-template-rows .6s var(--ease); }
+.card.is-open .card__more { grid-template-rows: 1fr; }
+.card__more > div { overflow: hidden; }
+.card__note { padding: 0 clamp(18px, 3vw, 34px); max-width: 520px; font-family: var(--f-serif); font-style: italic; font-size: clamp(15px, 1.4vw, 19px); line-height: 1.35; }
+.card__sets { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; padding: 18px clamp(18px, 3vw, 34px) clamp(18px, 3vw, 30px); }
+.card__set { position: relative; display: block; aspect-ratio: 4 / 5; border-radius: 12px; overflow: hidden; }
+.card__set .slot { position: absolute; inset: 0; transition: transform .7s var(--ease); }
+.card__set:hover .slot { transform: scale(1.07); }
+.card__set span { position: absolute; z-index: 2; left: 8px; right: 8px; bottom: 7px; color: #fff; font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; text-shadow: 0 1px 6px rgba(0, 0, 0, .5); }
+.card__plus { position: absolute; z-index: 3; top: 16px; right: 18px; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; border: 1.5px solid currentColor; font-size: 15px; transition: transform .5s var(--ease); }
+.card.is-open .card__plus { transform: rotate(45deg); }
+
+/* ========== 04 · THE TIGER PALETTE QUIZ ========== */
+.quiz { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(20px, 3vw, 44px); align-items: center; padding: clamp(80px, 10vw, 140px) var(--gut); background: #fff; }
+.quiz__art { position: relative; aspect-ratio: 3 / 4; max-height: 86svh; width: 100%; overflow: hidden; }
+.quiz__art .slot { position: absolute; inset: 0; }
+.quiz__col { max-width: 440px; }
+.quiz__k { font-size: 10px; font-weight: 800; letter-spacing: .26em; text-transform: uppercase; color: #d35a87; }
+.quiz__q { margin: 10px 0 26px; font-family: var(--f-serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 52px); line-height: 1.02; letter-spacing: -.02em; color: #4a2214; }
+.quiz__sw { display: grid; gap: clamp(14px, 2vw, 24px); }
+.sw { position: relative; display: flex; flex-direction: column; justify-content: flex-end; height: clamp(90px, 10vw, 124px); padding: 14px 18px; border-radius: 18px; text-align: left; transition: transform .45s var(--ease), box-shadow .45s; }
+.sw:hover { transform: translateX(10px); box-shadow: -10px 14px 30px -18px rgba(49, 1, 1, .5); }
+.sw--rose { background: #d35a87; color: #fff; } .sw--teal { background: #42979a; color: #fff; } .sw--ivory { background: #f3ebde; color: #d35a87; }
+.sw__t { font-size: clamp(14px, 1.3vw, 17px); font-weight: 700; line-height: 1.2; }
+.sw__h { margin-top: 2px; font-size: 9px; font-weight: 700; letter-spacing: .08em; opacity: .8; }
+.quiz__res { display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: center; }
+.quiz__res[hidden], .quiz__sw[hidden] { display: none; }
+.quiz__tip { height: clamp(200px, 22vw, 280px); filter: drop-shadow(0 14px 20px rgba(49, 1, 1, .25)); }
+.quiz__name { font-family: var(--f-script); font-size: clamp(64px, 7vw, 110px); line-height: 1; color: #d35a87; margin: 4px 0 6px; }
+.quiz__why { font-family: var(--f-serif); font-style: italic; font-size: 17px; line-height: 1.35; color: #4a2214; }
+.quiz__btns { display: flex; gap: 12px; margin-top: 20px; }
+.quiz__go, .quiz__again { white-space: nowrap; padding: 13px 22px; border-radius: 99px; border: 1.5px solid var(--cherry); font-size: 10px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--cherry); transition: background .3s, color .3s; }
+.quiz__go { background: var(--cherry); color: var(--blush); }
+.quiz__go:hover { background: transparent; color: var(--cherry); }
+.quiz__again:hover { background: var(--cherry); color: var(--blush); }
+
+/* ========== responsive ========== */
+@media (max-width: 860px) {
+  .sh__go { display: none; }
+  .sub__half { min-height: 70svh; }
+  .card__tip { right: -28px; height: 110px; }
+  .card__plus { top: auto; bottom: 14px; }
+  .card__txt { max-width: 62%; }
+  .quiz { grid-template-columns: 1fr; }
+  .quiz__art { max-height: 60svh; }
+}
